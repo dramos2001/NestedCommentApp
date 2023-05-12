@@ -8,10 +8,10 @@ const Comment = ({ comment }) => {
     const [isReplying, setIsReplying] = useState(false);
     const [formStatus, setFormStatus] = useState(false);
   
-    const handleReplySubmit = (name, text) => {
+    const handleReplySubmit = (user_name, comment_input) => {
       const newReply = {
-        name: name,
-        text: text,
+        name: user_name,
+        text: comment_input,
         replies: [],
         score: 0,
       };

@@ -9,7 +9,7 @@
   border-radius: 5px;
   width: 500px;
   padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .comment-form {
