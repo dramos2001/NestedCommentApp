@@ -29,11 +29,11 @@ const Comment = ({ comment }) => {
         <div className='comment-body'>
           <p id='comment-name'>{comment.name}</p>
           <p>{comment.text}</p>
+          <button id='reply-button' class="btn btn-dark rounded" onClick={handleReplyButtonClick}>
+            Reply
+          </button>
         </div>
         <VoteComment/>
-        <button id='reply-button' class="btn btn-dark rounded" onClick={handleReplyButtonClick}>
-          Reply
-        </button>
         {isReplying && !formStatus && (
           <div>
             <CommentForm onSubmit={handleReplySubmit}/>

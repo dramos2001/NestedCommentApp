@@ -55,8 +55,10 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>New Post</h1>
-      <CommentForm onSubmit={handleCommentSubmit}/>
+      <div className='new-post'>
+        <h1><b>New Post</b></h1>
+        <CommentForm onSubmit={handleCommentSubmit}/>
+      </div>
       {/* <form className='comment-form' onSubmit={(e) => handleCommentSubmit(e, undefined, nameInput)}>
         <input type='text' name='nameInput' placeholder='Name...' 
          value={nameInput} onChange={handleNameChange}/>
