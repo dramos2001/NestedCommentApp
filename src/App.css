@@ -1,39 +1,83 @@
 .App {
   font-family: Arial, Helvetica, sans-serif;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.new-post {
+  border-radius: 5px;
+  width: 500px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */  
 }
 
 .comment-form {
   margin-bottom: 20px;
+  width: 98%;
 }
 
 .comment-form input[type="text"] {
   width: 100%;
-  padding: 5px;
+  margin: 2px;
+  padding: 10px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px;
 }
 
-.button {
+#submit-button {
+  margin: 2px;
   padding: 5px 10px;
   font-size: 14px;
-  background-color: #0079d3;
-  color: #fff;
-  border: none;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+#submit-button:disabled,
+#submit-button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+#reply-button {
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .comments {
   margin-top: 20px;
+  width: 500px;
 }
 
 .comment {
+  overflow: auto;
+  width: max-content;
   margin-bottom: 10px;
   padding: 10px;
   border-left: solid #ccc;
 }
+
+.comment-body {
+  float: left;
+  padding: 0px;
+}
+
+.comment-scores {
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+#comment-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0079d3;
+}
+
